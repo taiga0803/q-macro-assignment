@@ -2,6 +2,7 @@ clc
 clear all
 close all
 
+% 今回比較するのは日本とオーストラリア
 f = fred
 startdate = '01/01/1995';
 enddate = '01/01/2022';
@@ -14,7 +15,7 @@ q = JPY.Data(:,1);
 
 T = size(jpy,1);
 
-% Hodrick-Prescott filter for Japan
+% Hodrick-Prescott filter
 lam = 1600;
 A = zeros(T,T);
 
